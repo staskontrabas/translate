@@ -20,6 +20,7 @@ var selection = {
 				for(var i = startIndx; i < (range.startOffset + range.endOffset); i++){
 					if(startRangeNode.nodeValue[startIndx] == 'undefined' || !startRangeNode.nodeValue[startIndx] || !reg.test(startRangeNode.nodeValue[startIndx])){
 						startIndx++;
+						txt = txt.slice(1,0);
 					}
 					else break;
 					if(startRangeNode.nodeValue.length == startIndx){
