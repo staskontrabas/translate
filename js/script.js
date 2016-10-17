@@ -238,6 +238,14 @@ var createTrBlock = {
 		d.appendChild(title);
 		d.appendChild(ul);
 		document.getElementById('translate-title').innerHTML = txt;
+		d.addEventListener("mouseup", function(event){
+			event.stopPropagation();
+			event.preventDefault();
+		}, false);
+		d.addEventListener("mousedown", function(event){
+			event.stopPropagation();
+			event.preventDefault();
+		}, false);
 		vote(d,txt);
 		this.on = true;
 	},
